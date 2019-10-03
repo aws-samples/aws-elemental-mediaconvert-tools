@@ -29,7 +29,10 @@ You will need to attach the following policy to the role that is executing the L
         {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
-            "Action": "s3:PutObjectAcl",
+            "Action": [
+                "s3:ListBucket",
+                "s3:PutObjectAcl"
+            ],
             "Resource": "*"
         }
     ]
@@ -97,7 +100,10 @@ The following is an example bucket policy that is used in Account B. This would 
             "Sid": "Stmt1570060984261",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::111122223333:role/MediaConvertRole"
+                "AWS": [
+                    "arn:aws:iam::111122223333:role/MediaConvertRole",
+                    "arn:aws:iam::111122223333:role/service-role/aws-Lambda-Execution-Role"
+                ]
             },
             "Action": [
                 "s3:GetObject",
@@ -107,10 +113,12 @@ The following is an example bucket policy that is used in Account B. This would 
                 "s3:PutObjectAcl"
             ],
             "Resource": [
-                "arn:aws:s3:::bucket,
+                "arn:aws:s3:::bucket",
                 "arn:aws:s3:::bucket/*"
             ]
         }
     ]
 }
 ~~~~
+
+
