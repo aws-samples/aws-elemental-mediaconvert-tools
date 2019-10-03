@@ -40,7 +40,7 @@ What this does:
 It allows the lamda function to invoke the s3:PutObjectACL call. 
 
 #### Step 5:
-Save Lamda function
+Save Lambda function
 
 
  
