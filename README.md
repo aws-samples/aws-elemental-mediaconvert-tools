@@ -11,7 +11,9 @@ This repository contains code samples, functioning apps, as well as links to oth
 By default MediaConvert will set owner of an object to the the account that is running the actual MediaConvert job. This presents a problem if Account A (running MediaConvert) is placing outputs in a S3 bucket that resides in Account B. This Lambda function is triggered by a Cloudwatch Event that will traverse the output files from a MediaConvert job and will set the output objects ACL of that job to  `bucket-owner-full-control`
 
 
+[MediaConvert CloudWatch Widgets](https://github.com/aws-samples/aws-elemental-mediaconvert-tools/tree/master/cloudwatch_metrics "MediaConvert Object ACL")
 
+Widget templates for Amazon CloudWatch dashboards that use AWS Elemental MediaConvert metrics.  
 
 ## License Summary
 
