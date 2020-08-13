@@ -1,0 +1,15 @@
+{
+    "metrics": [
+        [ "AWS/MediaConvert", "StandbyTime", "Queue", "arn:aws:mediaconvert:us-west-2:343565428464:queues/Test Queue 1", { "label": "Test Queue 1" } ],
+        [ "...", "arn:aws:mediaconvert:us-west-2:343565428464:queues/Test Queue 2", { "label": "Test Queue 2" } ],
+        [ "...", "arn:aws:mediaconvert:us-west-2:343565428464:queues/Reserved Queue 1", { "label": "Reserved Queue 1" } ],
+        [ "...", "arn:aws:mediaconvert:us-west-2:343565428464:queues/Default", { "label": "Default" } ]
+    ],
+    "view": "timeSeries",
+    "stacked": true,
+    "region": "us-west-2",
+    "stat": "Average",
+    "period": 300,
+    "setPeriodToTimeRange": true,
+    "title": "Standby Time for Submitted Jobs"
+}

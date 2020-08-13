@@ -1,0 +1,15 @@
+{
+    "metrics": [
+        [ { "expression": "100*(m2/e2)", "label": "Percentage for Job Failure", "id": "e1", "stat": "Sum", "region": "us-west-2" } ],
+        [ { "expression": "SUM([m1,m2])", "label": "SumOfAll", "id": "e2", "visible": false, "stat": "Sum", "region": "us-west-2" } ],
+        [ { "expression": "100*(m1/m2)", "label": "Percentage for Job Complete", "id": "e3", "region": "us-west-2" } ],
+        [ "AWS/MediaConvert", "JobsCompletedCount", "Queue", "arn:aws:mediaconvert:us-west-2:111122223333:queues/Default", { "id": "m1", "label": "Jobs Completed Count", "visible": false } ],
+        [ ".", "JobsErroredCount", ".", ".", { "id": "m2", "label": "Jobs Errored Count", "visible": false } ]
+    ],
+    "view": "pie",
+    "region": "us-west-2",
+    "period": 300,
+    "stat": "Sum",
+    "setPeriodToTimeRange": true,
+    "title": "Percentage for Default Queue"
+}

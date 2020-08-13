@@ -1,0 +1,15 @@
+{
+    "metrics": [
+        [ { "expression": "SUM([m1,m2,m3,m4])", "label": "Total", "id": "e1", "region": "us-west-2" } ],
+        [ "AWS/MediaConvert", "JobsCompletedCount", "Queue", "arn:aws:mediaconvert:us-west-2:111122223333 :queues/Default", { "label": "Default", "id": "m1" } ],
+        [ "...", "arn:aws:mediaconvert:us-west-2:111122223333 :queues/Reserved Queue 1", { "label": "Reserved Queue 1", "id": "m2" } ],
+        [ "...", "arn:aws:mediaconvert:us-west-2:111122223333 :queues/Test Queue 1", { "label": "Test Queue 1", "id": "m3" } ],
+        [ "...", "arn:aws:mediaconvert:us-west-2:111122223333 :queues/Test Queue 2", { "label": "Test Queue 2", "id": "m4" } ]
+    ],
+    "view": "singleValue",
+    "region": "us-west-2",
+    "stat": "Sum",
+    "period": 5,
+    "setPeriodToTimeRange": true,
+    "title": "Completed Jobs"
+}
