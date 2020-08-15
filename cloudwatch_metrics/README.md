@@ -1,6 +1,6 @@
 ## Amazon CloudWatch widgets for AWS Elemental MediaConvert
 
-This document goes over how to edit cloud the provided Cloudwatch widgets from the blog post [Creating dashboards and alarms for AWS Elemental MediaConvert using Amazon CloudWatch](https://aws.amazon.com/blogs/media/creating-dashboards-and-alarms-for-aws-elemental-mediaconvert-using-amazon-cloudwatch/).
+This document goes over how to edit  the provided Cloudwatch widgets from the blog post [Creating dashboards and alarms for AWS Elemental MediaConvert using Amazon CloudWatch](https://aws.amazon.com/blogs/media/creating-dashboards-and-alarms-for-aws-elemental-mediaconvert-using-amazon-cloudwatch/).
 
 ## Setup
 
