@@ -15,7 +15,7 @@ By default MediaConvert will set owner of an object to the the account that is r
 
 Widget templates for Amazon CloudWatch dashboards that use AWS Elemental MediaConvert metrics.  
 
-[MediaConvert Resource Cloner](https://github.com/aws-samples/aws-elemental-mediaconvert-tools/tree/master/clone_mediaconvert_resources" MediaConvert Resource Cloner ACL")
+[MediaConvert Resource Cloner](https://github.com/aws-samples/aws-elemental-mediaconvert-tools/tree/master/clone_mediaconvert_resources "MediaConvert Resource Cloner ACL")
 
 Python script used to clone MediaConvert resources between regions 
 
