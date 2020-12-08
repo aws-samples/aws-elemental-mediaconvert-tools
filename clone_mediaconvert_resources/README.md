@@ -4,7 +4,7 @@ This script will clone MediaConvert resources from one region to another. Users 
 
 ## Assumptions
 
-The Python modules boto3 and awscli is installed. "aws configure" was run to define the access key and secret access key to be used by boto3 to interact with the MediaConvert. The user that runs the script has an IAM policy that allows the user to run list, describe and create commands with MediaConvert. 
+The Python modules boto3 and awscli is installed. "aws configure" was run to define the access key and secret access key to be used by boto3 to interact with MediaConvert. The user that runs the script has an IAM policy that allows the user to run list, describe and create commands with MediaConvert. 
 
 
 ## Execution of python script
@@ -33,7 +33,7 @@ Parameters
 
 In order to run this script you must have a list of MediaConvert endpoints. Run the "-i" or "--initialize" to create configuration file for endpoints to desired regions. 
 
-```python clone_mediaconvert_resources.py-i ```
+```python clone_mediaconvert_resources.py -i ```
 
 Using a clone from region of us-east-1, action of All, and clone to region of us-west-2. 
 
