@@ -2,7 +2,7 @@
 
 AWS Elemental MediaConvert is a service that formats and compresses offline video content for delivery to televisions or connected devices. High-quality video transcoding makes it possible to create on-demand video assets for virtually any device.
 
-This repository contains code samples, functioning apps, as well as links to other resources that can help customers use AWS Elemenatl MediaConvert. 
+This repository contains code samples, functioning apps, as well as links to other resources that can help customers use AWS Elemental MediaConvert. 
 
 ## Directory
 
