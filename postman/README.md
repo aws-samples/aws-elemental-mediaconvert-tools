@@ -15,11 +15,11 @@ You can view the [Postman documentation](https://learning.postman.com/docs/getti
 
 V1: (deprecated / older versions of Postman)
 
-https://github.com/aws-samples/aws-elemental-mediaconvert-tools/postman/v1/
+https://github.com/aws-samples/aws-elemental-mediaconvert-tools/tree/master/postman/v1
 
 V2 (updated / most recent version of Postman)
 
-https://github.com/aws-samples/aws-elemental-mediaconvert-tools/postman/v2/
+https://github.com/aws-samples/aws-elemental-mediaconvert-tools/tree/master/postman/v2
  
 
 #### Step 3: 

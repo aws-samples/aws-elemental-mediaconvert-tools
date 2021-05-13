@@ -19,6 +19,10 @@ Widget templates for Amazon CloudWatch dashboards that use AWS Elemental MediaCo
 
 Python script used to clone MediaConvert resources between regions 
 
+[Postman Collections](https://github.com/aws-samples/aws-elemental-mediaconvert-tools/tree/master/postman "Postman collections")
+
+Postman collections used to interact with the MediaConvert API
+
 ## License Summary
 
 This sample code is made available under the MIT-0 license. See the LICENSE file.
