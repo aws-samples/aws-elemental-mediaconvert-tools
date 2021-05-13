@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+		"name": "EMF Get",
+		"description": "EMF Get Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET JOB ID",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supportedregion",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/jobs/<job-id>",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"jobs",
+						"<job-id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Queue Details",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/queues/<QUEUE-NAME-HERE>",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"queues",
+						"<QUEUE-NAME-HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET List Queue ",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "ScretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/queues",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"queues"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "7639779e-db69-b76f-cdbc-5ed1327fa0ca",
+		"name": "AWS Elemental MediaConvert Resource Tagging ",
+		"description": "How to use resource tagging ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tag Existing Queue",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"arn\": \"arn:aws:mediaconvert:region-name-1:111122223333:queues/QueueP2\",\r\n        \"Tags\": {\r\n            \"CostCenter\": \"BU-Tomato\"\r\n        }\r\n}"
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/tags?",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "AWS_Region",
+							"value": "eu-west-1",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Access_Key",
+							"value": "KEY",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Secret_Key",
+							"value": "KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tag Existing Job Template",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"arn\": \"arn:aws:mediaconvert:region-name-1:111122223333:jobTemplates/MP4-ABR-Template\",\r\n        \"Tags\": {\r\n            \"CostCenter\": \"BU-Apple\"\r\n        }\r\n}"
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/tags?",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "AWS_Region",
+							"value": "eu-west-1",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Access_Key",
+							"value": "KEY",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Secret_Key",
+							"value": "KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tag Existing Preset",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"arn\": \"arn:aws:mediaconvert:eu-west-1:111122223333:presets/1080pMP4Preset\",\r\n        \"Tags\": {\r\n            \"CostCenter\": \"BU-Carrot\"\r\n        }\r\n}"
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/tags?",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "AWS_Region",
+							"value": "eu-west-1",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Access_Key",
+							"value": "KEY",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Secret_Key",
+							"value": "KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tag from Resource",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"arn\":\"arn:aws:mediaconvert:region-name-1:111122223333:queues/QueueP2\" ,\r\n \"TagKeys\": [\r\n        \"CostCenter\"\r\n        ]\r\n}"
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/tags?",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "AWS_Region",
+							"value": "eu-west-1",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Access_Key",
+							"value": "KEY",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Secret_Key",
+							"value": "KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Resource (Job Template) with Tags",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Job Template Test with Resource Tags\",\n  \"description\": \"Job Template Test\",\n  \"tags\":{\n    \"CostCenter\": \"BU-Banana\"\n  },\n  \"settings\":{\n    \"outputGroups\": [\n        {\n            \"name\": \"File Group\",\n            \"outputs\": [\n                {\n                    \"containerSettings\": {\n                        \"container\": \"MP4\",\n                        \"mp4Settings\": {\n                            \"cslgAtom\": \"INCLUDE\",\n                            \"freeSpaceBox\": \"EXCLUDE\",\n                            \"moovPlacement\": \"PROGRESSIVE_DOWNLOAD\"\n                        }\n                    },\n                    \"videoDescription\": {\n                        \"width\": 640,\n                        \"scalingBehavior\": \"DEFAULT\",\n                        \"height\": 480,\n                        \"videoPreprocessors\": {\n                            \"deinterlacer\": {\n                                \"algorithm\": \"INTERPOLATE\",\n                                \"mode\": \"DEINTERLACE\",\n                                \"control\": \"NORMAL\"\n                            }\n                        },\n                        \"timecodeInsertion\": \"DISABLED\",\n                        \"antiAlias\": \"ENABLED\",\n                        \"sharpness\": 50,\n                        \"codecSettings\": {\n                            \"codec\": \"H_264\",\n                            \"h264Settings\": {\n                                \"interlaceMode\": \"PROGRESSIVE\",\n                                \"parNumerator\": 1,\n                                \"numberReferenceFrames\": 3,\n                                \"syntax\": \"DEFAULT\",\n                                \"softness\": 0,\n                                \"framerateDenominator\": 1001,\n                                \"gopClosedCadence\": 1,\n                                \"hrdBufferInitialFillPercentage\": 90,\n                                \"gopSize\": 2,\n                                \"slices\": 1,\n                                \"gopBReference\": \"ENABLED\",\n                                \"hrdBufferSize\": 3000000,\n                                \"slowPal\": \"DISABLED\",\n                                \"parDenominator\": 1,\n                                \"spatialAdaptiveQuantization\": \"ENABLED\",\n                                \"temporalAdaptiveQuantization\": \"ENABLED\",\n                                \"flickerAdaptiveQuantization\": \"ENABLED\",\n                                \"entropyEncoding\": \"CABAC\",\n                                \"bitrate\": 1500000,\n                                \"framerateControl\": \"SPECIFIED\",\n                                \"rateControlMode\": \"CBR\",\n                                \"codecProfile\": \"MAIN\",\n                                \"telecine\": \"NONE\",\n                                \"framerateNumerator\": 24000,\n                                \"minIInterval\": 0,\n                                \"adaptiveQuantization\": \"HIGH\",\n                                \"codecLevel\": \"LEVEL_3\",\n                                \"fieldEncoding\": \"PAFF\",\n                                \"sceneChangeDetect\": \"ENABLED\",\n                                \"qualityTuningLevel\": \"MULTI_PASS_HQ\",\n                                \"framerateConversionAlgorithm\": \"DUPLICATE_DROP\",\n                                \"unregisteredSeiTimecode\": \"DISABLED\",\n                                \"gopSizeUnits\": \"SECONDS\",\n                                \"parControl\": \"SPECIFIED\",\n                                \"numberBFramesBetweenReferenceFrames\": 3,\n                                \"repeatPps\": \"DISABLED\"\n                            }\n                        },\n                        \"afdSignaling\": \"NONE\",\n                        \"dropFrameTimecode\": \"ENABLED\",\n                        \"respondToAfd\": \"NONE\",\n                        \"colorMetadata\": \"INSERT\"\n                    },\n                    \"audioDescriptions\": [\n                        {\n                            \"audioTypeControl\": \"FOLLOW_INPUT\",\n                            \"audioSourceName\": \"Audio Selector 1\",\n                            \"codecSettings\": {\n                                \"codec\": \"AAC\",\n                                \"aacSettings\": {\n                                    \"audioDescriptionBroadcasterMix\": \"NORMAL\",\n                                    \"bitrate\": 160000,\n                                    \"rateControlMode\": \"CBR\",\n                                    \"codecProfile\": \"LC\",\n                                    \"codingMode\": \"CODING_MODE_2_0\",\n                                    \"rawFormat\": \"NONE\",\n                                    \"sampleRate\": 48000,\n                                    \"specification\": \"MPEG4\"\n                                }\n                            },\n                            \"languageCodeControl\": \"FOLLOW_INPUT\",\n                            \"audioType\": 0\n                        }\n                    ],\n                    \"nameModifier\": \"_settings\"\n                },\n                {\n                    \"preset\": \"System-Generic_Hd_Mp4_Hevc_Aac_16x9_1920x1080p_50Hz_6Mbps\",\n                    \"nameModifier\": \"_preset\"\n                }\n            ],\n            \"outputGroupSettings\": {\n                \"type\": \"FILE_GROUP_SETTINGS\",\n                \"fileGroupSettings\": {}\n            }\n        }\n    ],\n    \"adAvailOffset\": 0\n  }\n}  "
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/jobTemplates?",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"jobTemplates"
+					],
+					"query": [
+						{
+							"key": "AWS_Region",
+							"value": "eu-west-1",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Access_Key",
+							"value": "KEY",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Secret_Key",
+							"value": "KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific Resource ARN",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "accessKey",
+							"value": "AccessKey",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "SecretKey",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "supported-region",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "mediaconvert",
+							"type": "string"
+						},
+						{
+							"key": "saveToRequest",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/tags/arn%3Aaws%3Amediaconvert%3Aregion-name-1%3A111122223333%3Aqueues%2FQueueP2?",
+					"protocol": "https",
+					"host": [
+						"<custom-account-id>",
+						"mediaconvert",
+						"<region>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"2017-08-29",
+						"tags",
+						"arn%3Aaws%3Amediaconvert%3Aregion-name-1%3A111122223333%3Aqueues%2FQueueP2"
+					],
+					"query": [
+						{
+							"key": "AWS_Region",
+							"value": "eu-west-1",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Access_Key",
+							"value": "KEY",
+							"disabled": true
+						},
+						{
+							"key": "AWS_Secret_Key",
+							"value": "KEY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

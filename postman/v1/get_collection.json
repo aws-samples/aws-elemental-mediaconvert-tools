@@ -1,0 +1,231 @@
+{
+	"id": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+	"name": "AWS Elemental MediaConvert GET Request",
+	"description": "AWS Elemental MediaConvert GET Request",
+	"order": [
+		"bc671df5-4a85-54b6-f137-19cb70516fd2",
+		"85318a0b-c490-3718-62eb-2a737de83af0",
+		"1fd40def-ca4b-1842-c99a-778f62269010",
+		"8c5ee49e-3eb0-5b9f-ae03-f6ce59763c93",
+		"abedbb9c-4b97-6596-ae4c-dc1ff83f1e59",
+		"0348eabe-0893-696e-718d-e819e699b34c"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "2332976",
+	"public": false,
+	"requests": [
+		{
+			"id": "0348eabe-0893-696e-718d-e819e699b34c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/presets/<name-of-preset>",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "AccessKey",
+				"secretKey": "SecretKey",
+				"region": "supported-region",
+				"service": "mediaconvert",
+				"saveToRequest": true
+			},
+			"time": 1530559387196,
+			"name": "List of Job Presets",
+			"description": "",
+			"collectionId": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+			"responses": []
+		},
+		{
+			"id": "1fd40def-ca4b-1842-c99a-778f62269010",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/queues",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "AccessKey",
+				"secretKey": "SecretKey",
+				"region": "supported-region",
+				"service": "mediaconvert",
+				"saveToRequest": true
+			},
+			"time": 1530558971036,
+			"name": "List All Queues",
+			"description": "",
+			"collectionId": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+			"responses": []
+		},
+		{
+			"id": "85318a0b-c490-3718-62eb-2a737de83af0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/queues/<QUEUE-NAME-HERE>",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "AccessKey",
+				"secretKey": "SecretKey",
+				"region": "supported-region",
+				"service": "mediaconvert",
+				"saveToRequest": true
+			},
+			"time": 1530558975692,
+			"name": "Specific Queue Details",
+			"description": "",
+			"collectionId": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+			"responses": []
+		},
+		{
+			"id": "8c5ee49e-3eb0-5b9f-ae03-f6ce59763c93",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/jobTemplates/<job-template-name>",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "AccessKey",
+				"secretKey": "SecretKey",
+				"region": "supported-region",
+				"service": "mediaconvert",
+				"saveToRequest": true
+			},
+			"time": 1530559427717,
+			"name": "Specific Job Template",
+			"description": "",
+			"collectionId": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+			"responses": []
+		},
+		{
+			"id": "abedbb9c-4b97-6596-ae4c-dc1ff83f1e59",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/jobTemplates",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+			"data": null,
+			"dataMode": "params",
+			"name": "List of Job Templates",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1530559135843,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "AccessKey",
+				"secretKey": "SecretKey",
+				"region": "supported-region",
+				"service": "mediaconvert",
+				"saveToRequest": true
+			}
+		},
+		{
+			"id": "bc671df5-4a85-54b6-f137-19cb70516fd2",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://<custom-account-id>.mediaconvert.<region>.amazonaws.com/2017-08-29/jobs/<job-id>",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "AccessKey",
+				"secretKey": "SecretKey",
+				"region": "supported-region",
+				"service": "mediaconvert",
+				"saveToRequest": true
+			},
+			"time": 1530558979699,
+			"name": "Specific Job ID",
+			"description": "",
+			"collectionId": "87fac2df-dd0f-b54a-b1f9-5b138cb4147f",
+			"responses": []
+		}
+	]
+}
