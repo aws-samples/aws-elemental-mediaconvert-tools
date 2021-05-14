@@ -1,0 +1,231 @@
+{
+  "Name": "IVS-EMC-Demo",
+  "Settings": {
+    "TimecodeConfig": {
+      "Source": "ZEROBASED"
+    },
+    "OutputGroups": [
+      {
+        "Name": "DASH ISO",
+        "Outputs": [
+          {
+            "ContainerSettings": {
+              "Container": "MPD"
+            },
+            "VideoDescription": {
+              "ScalingBehavior": "DEFAULT",
+              "TimecodeInsertion": "DISABLED",
+              "AntiAlias": "ENABLED",
+              "Sharpness": 50,
+              "CodecSettings": {
+                "Codec": "H_264",
+                "H264Settings": {
+                  "InterlaceMode": "PROGRESSIVE",
+                  "ScanTypeConversionMode": "INTERLACED",
+                  "NumberReferenceFrames": 3,
+                  "Syntax": "DEFAULT",
+                  "Softness": 0,
+                  "FramerateDenominator": 1,
+                  "GopClosedCadence": 1,
+                  "GopSize": 60,
+                  "Slices": 1,
+                  "GopBReference": "DISABLED",
+                  "EntropyEncoding": "CABAC",
+                  "FramerateControl": "SPECIFIED",
+                  "RateControlMode": "QVBR",
+                  "CodecProfile": "MAIN",
+                  "Telecine": "NONE",
+                  "FramerateNumerator": 30,
+                  "MinIInterval": 0,
+                  "AdaptiveQuantization": "AUTO",
+                  "CodecLevel": "AUTO",
+                  "FieldEncoding": "PAFF",
+                  "SceneChangeDetect": "ENABLED",
+                  "QualityTuningLevel": "MULTI_PASS_HQ",
+                  "FramerateConversionAlgorithm": "DUPLICATE_DROP",
+                  "UnregisteredSeiTimecode": "DISABLED",
+                  "GopSizeUnits": "FRAMES",
+                  "ParControl": "INITIALIZE_FROM_SOURCE",
+                  "NumberBFramesBetweenReferenceFrames": 2,
+                  "RepeatPps": "DISABLED",
+                  "DynamicSubGop": "STATIC"
+                }
+              },
+              "AfdSignaling": "NONE",
+              "DropFrameTimecode": "ENABLED",
+              "RespondToAfd": "NONE",
+              "ColorMetadata": "INSERT"
+            },
+            "NameModifier": "video"
+          },
+          {
+            "ContainerSettings": {
+              "Container": "MPD"
+            },
+            "AudioDescriptions": [
+              {
+                "AudioTypeControl": "FOLLOW_INPUT",
+                "AudioSourceName": "Audio Selector 1",
+                "CodecSettings": {
+                  "Codec": "AAC",
+                  "AacSettings": {
+                    "AudioDescriptionBroadcasterMix": "NORMAL",
+                    "Bitrate": 96000,
+                    "RateControlMode": "CBR",
+                    "CodecProfile": "LC",
+                    "CodingMode": "CODING_MODE_2_0",
+                    "RawFormat": "NONE",
+                    "SampleRate": 48000,
+                    "Specification": "MPEG4"
+                  }
+                },
+                "LanguageCodeControl": "FOLLOW_INPUT"
+              }
+            ],
+            "NameModifier": "audio-96"
+          }
+        ],
+        "OutputGroupSettings": {
+          "Type": "DASH_ISO_GROUP_SETTINGS",
+          "DashIsoGroupSettings": {
+            "AudioChannelConfigSchemeIdUri": "MPEG_CHANNEL_CONFIGURATION",
+            "SegmentLength": 6,
+            "MinFinalSegmentLength": 0,
+            "Destination": "s3://DOC-EXAMPLE-BUCKET1/dash/$dt$/",
+            "FragmentLength": 2,
+            "SegmentControl": "SINGLE_FILE",
+            "PtsOffsetHandlingForBFrames": "ZERO_BASED",
+            "MpdProfile": "MAIN_PROFILE",
+            "HbbtvCompliance": "NONE"
+          }
+        },
+        "AutomatedEncodingSettings": {
+          "AbrSettings": {
+            "MaxAbrBitrate": 8000000,
+            "MinAbrBitrate": 600000
+          }
+        }
+      },
+      {
+        "Name": "File Group",
+        "Outputs": [
+          {
+            "ContainerSettings": {
+              "Container": "MP4",
+              "Mp4Settings": {
+                "CslgAtom": "INCLUDE",
+                "CttsVersion": 0,
+                "FreeSpaceBox": "EXCLUDE",
+                "MoovPlacement": "PROGRESSIVE_DOWNLOAD",
+                "AudioDuration": "DEFAULT_CODEC_DURATION"
+              }
+            },
+            "VideoDescription": {
+              "Width": 720,
+              "ScalingBehavior": "DEFAULT",
+              "Height": 480,
+              "TimecodeInsertion": "DISABLED",
+              "AntiAlias": "ENABLED",
+              "Sharpness": 50,
+              "CodecSettings": {
+                "Codec": "H_264",
+                "H264Settings": {
+                  "InterlaceMode": "PROGRESSIVE",
+                  "ScanTypeConversionMode": "INTERLACED",
+                  "NumberReferenceFrames": 3,
+                  "Syntax": "DEFAULT",
+                  "Softness": 0,
+                  "FramerateDenominator": 1,
+                  "GopClosedCadence": 1,
+                  "GopSize": 60,
+                  "Slices": 1,
+                  "GopBReference": "DISABLED",
+                  "EntropyEncoding": "CABAC",
+                  "Bitrate": 4000000,
+                  "FramerateControl": "SPECIFIED",
+                  "RateControlMode": "CBR",
+                  "CodecProfile": "MAIN",
+                  "Telecine": "NONE",
+                  "FramerateNumerator": 30,
+                  "MinIInterval": 0,
+                  "AdaptiveQuantization": "AUTO",
+                  "CodecLevel": "AUTO",
+                  "FieldEncoding": "PAFF",
+                  "SceneChangeDetect": "ENABLED",
+                  "QualityTuningLevel": "SINGLE_PASS_HQ",
+                  "FramerateConversionAlgorithm": "DUPLICATE_DROP",
+                  "UnregisteredSeiTimecode": "DISABLED",
+                  "GopSizeUnits": "FRAMES",
+                  "ParControl": "INITIALIZE_FROM_SOURCE",
+                  "NumberBFramesBetweenReferenceFrames": 2,
+                  "RepeatPps": "DISABLED",
+                  "DynamicSubGop": "STATIC"
+                }
+              },
+              "AfdSignaling": "NONE",
+              "DropFrameTimecode": "ENABLED",
+              "RespondToAfd": "NONE",
+              "ColorMetadata": "INSERT"
+            },
+            "AudioDescriptions": [
+              {
+                "AudioTypeControl": "FOLLOW_INPUT",
+                "CodecSettings": {
+                  "Codec": "AAC",
+                  "AacSettings": {
+                    "AudioDescriptionBroadcasterMix": "NORMAL",
+                    "Bitrate": 96000,
+                    "RateControlMode": "CBR",
+                    "CodecProfile": "LC",
+                    "CodingMode": "CODING_MODE_2_0",
+                    "RawFormat": "NONE",
+                    "SampleRate": 48000,
+                    "Specification": "MPEG4"
+                  }
+                },
+                "LanguageCodeControl": "FOLLOW_INPUT"
+              }
+            ],
+            "NameModifier": "lowres"
+          }
+        ],
+        "OutputGroupSettings": {
+          "Type": "FILE_GROUP_SETTINGS",
+          "FileGroupSettings": {
+            "Destination": "s3://DOC-EXAMPLE-BUCKET1/mp4-lowres/$dt$/"
+          }
+        }
+      }
+    ],
+    "AdAvailOffset": 0,
+    "Inputs": [
+      {
+        "AudioSelectors": {
+          "Audio Selector 1": {
+            "Offset": 0,
+            "DefaultSelection": "DEFAULT",
+            "ProgramSelection": 1
+          }
+        },
+        "VideoSelector": {
+          "ColorSpace": "FOLLOW",
+          "Rotate": "DEGREE_0",
+          "AlphaBehavior": "DISCARD"
+        },
+        "FilterEnable": "AUTO",
+        "PsiControl": "USE_PSI",
+        "FilterStrength": 0,
+        "DeblockFilter": "DISABLED",
+        "DenoiseFilter": "DISABLED",
+        "InputScanType": "AUTO",
+        "TimecodeSource": "ZEROBASED"
+      }
+    ]
+  },
+  "AccelerationSettings": {
+    "Mode": "DISABLED"
+  },
+  "StatusUpdateInterval": "SECONDS_60",
+  "Priority": 0,
+  "HopDestinations": []
+}
